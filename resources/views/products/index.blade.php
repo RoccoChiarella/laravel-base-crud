@@ -5,7 +5,12 @@
         <div class="row">
             <div class="col-12">
                 <h1 class="text-center">Tutti i prodotti</h1>
+                @foreach ($products as $product)
+                    <p>{{ $product->name }}</p>
+                @endforeach
             </div>
         </div>
     </div>
 @endsection
+
+@section('page-title', 'Products - Laravel Crud')
