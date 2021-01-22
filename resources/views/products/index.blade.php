@@ -12,7 +12,7 @@
         </div>
         <div class="row">
             <div class="col-12">
-                <table class="table text-center">
+                <table class="table">
                     <thead>
                         <tr>
                             <th scope="col">ID</th>
@@ -25,7 +25,10 @@
                             <tr>
                                 <td>{{$product->id}}</td>
                                 <td>{{$product->name}}</td>
-                                <td><a href="{{route('products.show', ['product' => $product->id])}}" class="btn btn-info">Dettagli</a></td>
+                                <td>
+                                    <a href="{{route('products.show', ['product' => $product->id])}}" class="btn btn-info">Dettagli</a>
+                                    <a href="{{ route('products.edit', ['product' => $product->id]) }}" class="btn btn-warning">Modifica</a>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
